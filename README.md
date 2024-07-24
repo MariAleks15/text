@@ -1,5 +1,3 @@
-# text
- This code will be useful for analyzing text data to quickly identify the most important or frequently occurring words
 from collections import Counter
 import re
 
@@ -16,6 +14,6 @@ if __name__ == "__main__":
     text = input("Введите текст для анализа: ")
     n = int(input("Введите количество наиболее часто встречающихся слов, которые нужно вывести: "))
     common_words = most_common_words(text, n)
-    print(f"Наиболее часто встречающиеся слова в тексте:")
+    print("Наиболее часто встречающиеся слова в тексте:")
     for word, count in common_words:
         print(f"{word}: {count} раз(а)")
