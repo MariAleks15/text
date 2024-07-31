@@ -63,3 +63,27 @@ if __name__ == "__main__":
     except ValueError:
         print("Ошибка: введите корректное число для количества слов.")
 
+        from collections import Counter
+import re
+
+def most_common_words(text, n=5, stop_words=None):
+    """
+    Возвращает n наиболее часто встречающихся слов в тексте.
+    
+    Параметры:
+    text (str): Входной текст для анализа.
+    n (int): Количество наиболее часто встречающихся слов для вывода (по умолчанию 5).
+    stop_words (set): Набор стоп-слов для исключения из анализа (по умолчанию None).
+    
+    Возвращает:
+    list: Список кортежей (слово, количество).
+    """
+    if stop_words is None:
+        stop_words = set()
+
+    # Разбиваем текст на слова, игнорируя знаки пунктуации и пробелы
+    words = re.findall(r'\w+', text.lower())
+    # Фильтруем стоп-слова
+    filtered_words = [word for word in words if word
+
+
